@@ -1,6 +1,7 @@
 CFLAGS=-Wall -g
+EXECUTABLES=ex1 ex3
 
-all: ex1
+all: $(EXECUTABLES)
 
 clean:
-	rm -f ex1
+	rm -f $(EXECUTABLES)
