@@ -7,6 +7,6 @@ type *ptr
 &thing
 	the address of thing
 type *ptr = &thing
-	a pointter of type named ptr set to the address of thing
+	a pointer of type named ptr set to the address of thing
 ptr++
 	increment where ptr points
