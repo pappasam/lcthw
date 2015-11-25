@@ -1,6 +1,2 @@
-*
-!.gitignore
-!*.c
-!Makefile
-!makefile
-!*.otl
+*.o
+*.dat
