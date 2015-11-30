@@ -62,7 +62,7 @@ int Command_fetch(apr_pool_t *p, const char *url, int fetch_only)
         return 0; // nothing needs to be done
     } else if (apr_fnmatch(TAR_GZ_PAT, info.path, 0) == APR_SUCCESS) {
         if(info.scheme) {
-            rc = Shel_exec(CURL_SH,
+            rc = Shell_exec(CURL_SH,
                     "URL", url, "TARGET", TAR_GZ_SRC, NULL);
             check(rc == 0, "Failed to curl source: %s", url);
         }

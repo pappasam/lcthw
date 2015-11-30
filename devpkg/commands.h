@@ -3,7 +3,7 @@
 
 #include <apr_pools.h>
 
-#define DEPENDSPATH "/tmp/DEPENDS"
+#define DEPENDS_PATH "/tmp/DEPENDS"
 #define TAR_GZ_SRC "/tmp/pkg-src.tar.gz"
 #define TAR_BZ2_SRC "/tmp/pkg-src.tar.bz2"
 #define BUILD_DIR "/tmp/pkg-src.tar.bz2"

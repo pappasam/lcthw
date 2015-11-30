@@ -64,7 +64,7 @@ int Shell_run(apr_pool_t *p, Shell *cmd)
     rv = apr_proc_create(&newproc, cmd->exe, cmd->args, NULL, attr, p);
     check(rv == APR_SUCCESS, "Failed to run command.");
 
-    rv = apr_proc_wait(&newproc, &cmd->exit_clde, &cmd->exit_why, APR_WAIT);
+    rv = apr_proc_wait(&newproc, &cmd->exit_code, &cmd->exit_why, APR_WAIT);
     check(rv == APR_CHILD_DONE, "Failed to wait.");
 
     check(cmd->exit_code == 0, "%s exited badly.", cmd->exe);
@@ -78,7 +78,7 @@ error:
 }
 
 Shell CLEANUP_SH = {
-    .ext = "rm",
+    .exe = "rm",
     .dir = "/tmp",
     .args = {"rm", "-rf", "/tmp/pkg-build", "/tmp/pkg-src.tar.gz",
         "/tmp/pkg-src.tar.bz2", "/tmp/DEPENDS", NULL},
